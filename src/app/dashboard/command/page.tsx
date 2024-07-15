@@ -16,7 +16,6 @@ import {
 	GearIcon,
 } from '@radix-ui/react-icons';
 import { CalendarIcon, RocketIcon } from 'lucide-react';
-import DashboardLayout from '../layouth';
 import { useEffect, useState } from 'react';
 
 export default function Page() {
@@ -35,7 +34,6 @@ export default function Page() {
 	}, []);
 
 	return (
-		<DashboardLayout>
 			<div>
 				<CommandDialog
 					open={open}
@@ -91,6 +89,5 @@ export default function Page() {
 					</p>
 				</div>
 			</div>
-		</DashboardLayout>
 	);
 }

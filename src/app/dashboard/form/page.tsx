@@ -3,7 +3,6 @@
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import DashboardLayout from '../layouth';
 import { Button } from '@/components/ui/button';
 import {
 	Form,
@@ -59,7 +58,6 @@ export default function Page() {
 		console.log({ values });
 	}
 	return (
-		<DashboardLayout>
 			<div>
 				<Form {...form}>
 					<form
@@ -209,6 +207,5 @@ export default function Page() {
 					</form>
 				</Form>
 			</div>
-		</DashboardLayout>
 	);
 }

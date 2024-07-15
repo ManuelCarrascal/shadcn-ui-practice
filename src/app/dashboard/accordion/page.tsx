@@ -4,7 +4,6 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from '@/components/ui/accordion';
-import DashboardLayout from '../layouth';
 
 const items = [
 	{
@@ -28,25 +27,21 @@ const items = [
 
 export default function Page() {
 	return (
-		<DashboardLayout>
-			<div>
-				<Accordion
-					type="single"
-					className="w-full"
-				>
-					{items.map((item) => (
-						<AccordionItem
-							value={item.id}
-							key={item.id}
-						>
-							<AccordionTrigger>{item.question}</AccordionTrigger>
-							<AccordionContent>
-								{item.answer}
-							</AccordionContent>
-						</AccordionItem>
-					))}
-				</Accordion>
-			</div>
-		</DashboardLayout>
+		<div>
+			<Accordion
+				type="single"
+				className="w-full"
+			>
+				{items.map((item) => (
+					<AccordionItem
+						value={item.id}
+						key={item.id}
+					>
+						<AccordionTrigger>{item.question}</AccordionTrigger>
+						<AccordionContent>{item.answer}</AccordionContent>
+					</AccordionItem>
+				))}
+			</Accordion>
+		</div>
 	);
 }
