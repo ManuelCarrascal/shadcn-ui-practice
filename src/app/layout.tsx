@@ -3,7 +3,8 @@ import { Inter as FontSans } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster as SonnerToaster } from '@/components/ui/sonner';
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from '@/components/ui/toaster';
+import { ThemeProvider } from '@/components/ui/theme-provider';
 
 const fontSans = FontSans({
 	subsets: ['latin'],
@@ -21,14 +22,21 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<body
 				className={cn(
 					'min-h-screen bg-background font-sans antialiased',
 					fontSans.variable
 				)}
 			>
-				{children}
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
+					{children}
+				</ThemeProvider>
 				<SonnerToaster />
 				<Toaster />
 			</body>

@@ -1,5 +1,4 @@
 'use client';
-import DashboardLayout from '../layouth';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import {
@@ -76,7 +75,6 @@ export default function Page() {
 	const [open2, setOpen2] = useState(false);
 	const [selectedStatus, setSelectedStatus] = useState<Status | null>(null);
 	return (
-		<DashboardLayout>
 			<div className="grid gap-2 grid-cols-2">
 				<Popover
 					open={open}
@@ -181,6 +179,5 @@ export default function Page() {
 					</Popover>
 				</div>
 			</div>
-		</DashboardLayout>
 	);
 }

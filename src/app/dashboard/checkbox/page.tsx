@@ -1,7 +1,6 @@
 'use client';
 
 import { Checkbox } from '@/components/ui/checkbox';
-import DashboardLayout from '../layouth';
 import { useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 
@@ -9,7 +8,6 @@ export default function Page() {
 	const [terms, setTerms] = useState(false);
 
 	return (
-		<DashboardLayout>
 			<div className="items-top flex space-x-2">
 				<Checkbox
 					id="terms1"
@@ -33,6 +31,5 @@ export default function Page() {
 					)}
 				</div>
 			</div>
-		</DashboardLayout>
 	);
 }

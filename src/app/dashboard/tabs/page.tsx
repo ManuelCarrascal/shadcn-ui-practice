@@ -1,11 +1,9 @@
-import DashboardLayout from '../layouth';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Tab1 from './ui/tab1';
 import Tab2 from './ui/tab2';
 
 export default function Page() {
 	return (
-		<DashboardLayout>
 			<div>
 				<Tabs
 					defaultValue="account"
@@ -23,6 +21,5 @@ export default function Page() {
 					</TabsContent>
 				</Tabs>
 			</div>
-		</DashboardLayout>
 	);
 }

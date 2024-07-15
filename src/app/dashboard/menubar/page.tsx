@@ -15,11 +15,9 @@ import {
 	MenubarSubTrigger,
 	MenubarTrigger,
 } from '@/components/ui/menubar';
-import DashboardLayout from '../layouth';
 
 export default function Page() {
 	return (
-		<DashboardLayout>
 			<div>
 				<Menubar>
 					<MenubarMenu>
@@ -120,6 +118,5 @@ export default function Page() {
 					</MenubarMenu>
 				</Menubar>
 			</div>
-		</DashboardLayout>
 	);
 }
